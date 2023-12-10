@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+  }
+  
+  .destaque {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .destaque h2 {
+    font-size: 2rem;
+  }
+  
+  .videos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: fit-content;
+    margin: 0 auto;
+  }
