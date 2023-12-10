@@ -4,7 +4,7 @@ import Video from './Video';
 import { videos } from "../videos";
 
 import "./Home.css"
-import { Aside } from './Aside';
+import { Aside } from './Componentes/Aside';
 
 const Home = () => {
 
