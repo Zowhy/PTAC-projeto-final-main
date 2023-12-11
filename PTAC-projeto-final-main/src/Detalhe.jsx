@@ -5,3 +5,5 @@ import { useParams } from 'react-router-dom';
 
 export function Detalhe ()  {
   const {id} = useParams ()
+
+  const videoSaves = JSON.parse(localStorage.getItem("Lista")) || [];
