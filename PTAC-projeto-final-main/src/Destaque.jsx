@@ -1,11 +1,11 @@
-import { videos } from "../videos";
-import Video from "./Video";
 import "./Destaque.css";
+import { Card } from "./componentes/Card";
 import { Aside } from "./Aside";
 
 export function Destaque() {
 
-  const filteredVideosArray = videos.filter(video => video.id <= 4);
+  const videoSaves  = JSON.parse(localStorage.getItem("Lista")) || [];
+console.log (videoSaves)
 
   return (
     <div className="container">
@@ -14,9 +14,9 @@ export function Destaque() {
       <div className="destaque">
         <h2>Destaque</h2>
         <div className="videos">
-          {filteredVideosArray.map(video => (
-            <Video key={video.id} title={video.title} url={video.url} id={video.id} />
-          ))}
+        {videoSaves.slice(-4).map((videoweb,index) => (
+          <Card key = {index} video = {videoweb} />
+          ))} 
         </div>
       </div>
     </div>

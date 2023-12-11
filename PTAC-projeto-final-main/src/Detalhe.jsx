@@ -1,14 +1,15 @@
 import React from 'react';
 import "./Home.css"
+import { Card } from './componentes/Card';
 import { Aside } from './Aside';
 import { useParams } from 'react-router-dom';
 
 export function Detalhe ()  {
-  const {id} = useParams ()
+const {id} = useParams ()
 
-  const videoSaves = JSON.parse(localStorage.getItem("Lista")) || [];const filterVideos = videoSaves.find((object) => object.id == id) || null
-  const filterVideos = videoSaves.find((object) => object.id == id) || null
-  console.log (videoSaves)
+const videoSaves  = JSON.parse(localStorage.getItem("Lista")) || [];
+const filterVideos = videoSaves.find((object) => object.id == id) || null
+console.log (videoSaves)
 
   return (
     <div className="container">
@@ -24,3 +25,4 @@ export function Detalhe ()  {
     </div>
   );
 }
+

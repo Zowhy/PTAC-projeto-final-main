@@ -1,23 +1,24 @@
 import React from 'react';
-import Video from './Video';
-
-import { videos } from "../videos";
-
 import "./Home.css"
+import { Card } from './componentes/Card';
 import { Aside } from './Aside';
 
-const Home = () => {
+export function Home ()  {
+
+const videoSaves  = JSON.parse(localStorage.getItem("Lista")) || [];
+console.log (videoSaves)
 
   return (
     <div className="container">
       <Aside />
 
       <div className='home'>
-        <h2>Meus Vídeos Favoritos</h2>
+        <h2>Home</h2>
         <div className='videos'>
-          {videos.map(video => (
-            <Video key={video.id} title={video.title} url={video.url} id={video.id} />
-          ))}
+          {videoSaves.map((videoweb,index) => (
+          <Card key = {index} video = {videoweb} />
+          ))} 
+          
         </div>
       </div>
     </div>
