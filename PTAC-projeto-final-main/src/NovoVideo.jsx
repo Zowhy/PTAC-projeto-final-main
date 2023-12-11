@@ -51,7 +51,7 @@ export default function NovoVideo() {
   return (
     <div class="container-new-video">
       <Link to="/">home</Link>
-      <h1>Shows Videos</h1>
+      <h1>Events and Shows</h1>
       <form onSubmit={salvar}>
 
         <h4><i>Name</i></h4>

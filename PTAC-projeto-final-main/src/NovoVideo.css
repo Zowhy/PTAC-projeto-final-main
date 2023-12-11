@@ -20,4 +20,7 @@
     border-radius: 4px;
     cursor: pointer;
   }
-  
+
+  h1 {
+    font-size: 24px;
+   }

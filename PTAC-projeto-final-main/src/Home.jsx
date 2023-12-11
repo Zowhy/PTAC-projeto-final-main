@@ -13,7 +13,7 @@ console.log (videoSaves)
       <Aside />
 
       <div className='home'>
-        <h2>Home</h2>
+        <h2>Performances PlayboiCarti</h2>
         <div className='videos'>
           {videoSaves.map((videoweb,index) => (
           <Card key = {index} video = {videoweb} />
